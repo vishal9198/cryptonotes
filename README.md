@@ -974,3 +974,45 @@ Result: `φ(8) = 4`.
 ## Conclusion
 
 While the manual counting method is effective for small numbers, this approach becomes impractical for larger numbers. Future sessions will cover formulas to compute the Phi Function for larger values efficiently.
+
+# Revision Notes: Euler’s Totient Function
+
+Euler's Totient Function, denoted as `φ(n)`, counts the number of positive integers up to `n` that are **relatively prime** to `n` (i.e., the greatest common divisor is `1`).
+
+## 1. Fundamental Rules for Calculation
+
+### If `n` is a Prime Number
+
+The totient is simply `φ(n) = n - 1` because all numbers smaller than a prime are relatively prime to it.
+
+**Example:** `φ(5) = 4`
+
+### If `n` is a Product of Two Distinct Primes
+
+If `n = p × q`, since all multiples of `p` and `q` share a factor, we exclude them using the formula:
+
+`φ(n) = n(1 - 1/p)(1 - 1/q)`
+
+**Example:** For `n = 15` (`3 × 5`),
+
+`φ(15) = 15(1 - 1/3)(1 - 1/5) = 8`
+
+### If `n` is a Product of Composite and Prime Numbers
+
+You break `n` down into its prime factorization:
+
+`n = p₁^a × p₂^b × ...`
+
+The general formula is:
+
+`φ(n) = n(1 - 1/p₁)(1 - 1/p₂)...`
+
+**Example:** For `n = 12` (`2² × 3`),
+
+`φ(12) = 12(1 - 1/2)(1 - 1/3) = 4`
+
+## 2. Key Takeaways
+
+- **Manual vs. Formula:** While manual counting works for small numbers, the formulaic approach is essential for large numbers in cryptography.
+- **Relatively Prime:** Always verify if numbers are relatively prime; if they share a common divisor (like `4` and `6`, which share `2`), they are not relatively prime, meaning `GCD(4, 6) ≠ 1`.
+- **Cryptography Context:** `φ(n)` is a foundational concept in network security and algorithms like RSA.
