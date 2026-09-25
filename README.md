@@ -1016,3 +1016,48 @@ The general formula is:
 - **Manual vs. Formula:** While manual counting works for small numbers, the formulaic approach is essential for large numbers in cryptography.
 - **Relatively Prime:** Always verify if numbers are relatively prime; if they share a common divisor (like `4` and `6`, which share `2`), they are not relatively prime, meaning `GCD(4, 6) ≠ 1`.
 - **Cryptography Context:** `φ(n)` is a foundational concept in network security and algorithms like RSA.
+
+
+# Fermat's Little Theorem
+
+This video from *Neso Academy* provides an explanation of **Fermat's Little Theorem**, a key concept used in *cryptography* and *network security*.
+
+## What is Fermat's Little Theorem?
+
+### The Statement
+
+If `p` is a prime number and `a` is any positive integer not divisible by `p`, then:
+
+`a^(p-1) ≡ 1 (mod p)`
+
+### Purpose
+
+It is a powerful tool for solving complex problems involving modular exponentiation in cryptographic applications.
+
+## Solved Examples
+
+### Example 1
+
+Verifying the theorem for `p = 5` and `a = 2`.
+
+Since `5` is prime and `2` is not divisible by `5`, the theorem holds:
+
+`2^(5-1) ≡ 1 (mod 5)`
+
+and
+
+`2^4 ≡ 1 (mod 5)`.
+
+### Example 2
+
+Verifying for `p = 7` and `a = 3`.
+
+The video demonstrates how to use modular exponentiation shortcuts to simplify:
+
+`3^6 ≡ 1 (mod 7)`.
+
+### Example 3 (Invalid Case)
+
+Proving the theorem does **not** hold for `p = 4` and `a = 2`.
+
+Because `4` is **not a prime number**, the condition is not met, and the congruence is invalid.
