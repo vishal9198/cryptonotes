@@ -902,7 +902,6 @@ The **Key Inverse Matrix** is calculated as:
 $$
 K^{-1} = (\det K)^{-1} \times \operatorname{adj}(K) \pmod{26}
 $$
-
 ## 3. Summary of the Process
 
 1. **Find the Determinant:** Calculate the determinant of the original key matrix and find its multiplicative inverse modulo 26.
