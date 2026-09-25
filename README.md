@@ -928,3 +928,49 @@ $$
 3. **Compute the Key Inverse:** Multiply the modular inverse of the determinant by the adjoint matrix.
 
 4. **Decrypt:** Multiply the ciphertext vector by the key inverse matrix modulo 26 to recover the plaintext.
+
+# Euler’s Totient Function (Phi Function)
+
+This video from Neso Academy provides an introduction to Euler’s Totient Function, also known as the Phi Function, a core concept in Network Security and Cryptography.
+
+## Definition and Concept
+
+Euler’s Totient Function is defined as the number of positive integers less than or equal to `n` that are relatively prime (or co-prime) to `n`.
+
+Two numbers are relatively prime if their Greatest Common Divisor (GCD) is 1.
+
+## Method for Finding φ(n)
+
+To calculate the function for smaller numbers, you follow these steps:
+
+1. List integers from `1` up to `n`.
+2. Compute the GCD for each integer with `n`.
+3. Count how many of those integers have a GCD of 1 with `n`.
+
+## Solved Examples
+
+### Example 1: φ(5)
+
+Numbers to check: `1, 2, 3, 4, 5`.
+
+GCDs with 5: `1, 1, 1, 1, 5`.
+
+Result: `φ(5) = 4` because there are four numbers relatively prime to 5.
+
+### Example 2: φ(11)
+
+Since 11 is a prime number, all numbers from 1 to 10 are relatively prime to it.
+
+Result: `φ(11) = 10`.
+
+### Example 3: φ(8)
+
+Numbers to check: `1, 2, 3, 4, 5, 6, 7, 8`.
+
+Numbers relatively prime to 8 are: `1, 3, 5, 7`.
+
+Result: `φ(8) = 4`.
+
+## Conclusion
+
+While the manual counting method is effective for small numbers, this approach becomes impractical for larger numbers. Future sessions will cover formulas to compute the Phi Function for larger values efficiently.
