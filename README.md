@@ -889,6 +889,16 @@ Decryption requires several linear algebra operations under **modulo 26 arithmet
 - **Finding the Adjoint Matrix:** Required to compute the inverse.
 - **Multiplicative Inverse:** Finding the modular inverse of the determinant, which is essential when the formula involves division.
 
+# Hill Cipher Decryption
+
+## 1. Core Mathematical Concepts
+
+Decryption requires several linear algebra operations under **modulo 26 arithmetic**:
+
+- **Determining the Determinant:** Used to verify the existence of the inverse.
+- **Finding the Adjoint Matrix:** Required to compute the inverse.
+- **Multiplicative Inverse:** Finding the modular inverse of the determinant, which is essential when the formula involves division.
+
 ## 2. Hill Cipher Decryption Formula
 
 The decryption of the **plaintext (P)** from the **ciphertext (C)** using a **key matrix (K)** is:
@@ -900,11 +910,18 @@ $$
 The **Key Inverse Matrix** is calculated as:
 
 $$
-K^{-1} = (\det K)^{-1} \times \operatorname{adj}(K) \pmod{26}
+K^{-1} = (\det K)^{-1} \times \mathrm{adj}(K) \pmod{26}
 $$
+
 ## 3. Summary of the Process
 
 1. **Find the Determinant:** Calculate the determinant of the original key matrix and find its multiplicative inverse modulo 26.
+
+2. **Find the Adjoint:** Compute the adjoint of the key matrix.
+
+3. **Compute the Key Inverse:** Multiply the modular inverse of the determinant by the adjoint matrix.
+
+4. **Decrypt:** Multiply the ciphertext vector by the key inverse matrix modulo 26 to recover the plaintext.
 
 2. **Find the Adjoint:** Compute the adjoint of the key matrix.
 
