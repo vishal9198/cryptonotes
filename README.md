@@ -1061,3 +1061,218 @@ The video demonstrates how to use modular exponentiation shortcuts to simplify:
 Proving the theorem does **not** hold for `p = 4` and `a = 2`.
 
 Because `4` is **not a prime number**, the condition is not met, and the congruence is invalid.
+
+# Multiplicative Inverse
+
+## 1. Multiplicative Inverse
+
+The standard multiplicative inverse of a number \(a\) is:
+
+$$
+\frac{1}{a}
+$$
+
+such that:
+
+$$
+a \times \frac{1}{a} = 1
+$$
+
+---
+
+## 2. Multiplicative Inverse Under Modular Arithmetic
+
+In modular arithmetic, the multiplicative inverse of \(a\) modulo \(m\) is a number \(x\) such that:
+
+$$
+(a \times x) \mod m = 1
+$$
+
+The inverse depends on the modulus.
+
+For example, the inverse of a number can be different for different moduli.
+
+---
+
+## 3. Finding Multiplicative Inverse Manually
+
+### Example 1: Inverse of 3 mod 5
+
+We need to find \(x\) such that:
+
+$$
+(3 \times x) \mod 5 = 1
+$$
+
+Try \(x = 2\):
+
+$$
+3 \times 2 = 6
+$$
+
+$$
+6 \mod 5 = 1
+$$
+
+Therefore:
+
+$$
+\boxed{3^{-1} \equiv 2 \pmod{5}}
+$$
+
+### Example 2: Inverse of 2 mod 11
+
+We need to find \(x\) such that:
+
+$$
+(2 \times x) \mod 11 = 1
+$$
+
+Try \(x = 6\):
+
+$$
+2 \times 6 = 12
+$$
+
+$$
+12 \mod 11 = 1
+$$
+
+Therefore:
+
+$$
+\boxed{2^{-1} \equiv 6 \pmod{11}}
+$$
+
+---
+
+## 4. Existence of Multiplicative Inverse
+
+A multiplicative inverse of \(a\) modulo \(m\) exists **if and only if**:
+
+$$
+\gcd(a,m)=1
+$$
+
+That means \(a\) and \(m\) must be **relatively prime**.
+
+### Example
+
+For \(3\) and \(5\):
+
+$$
+\gcd(3,5)=1
+$$
+
+So, the inverse exists.
+
+For \(5\) and \(10\):
+
+$$
+\gcd(5,10)=5
+$$
+
+Since:
+
+$$
+\gcd(5,10)\neq1
+$$
+
+the multiplicative inverse does **not** exist.
+
+---
+
+## 5. Finding Inverse for Large Numbers
+
+For large numbers, finding the inverse by trial and error is inefficient.
+
+The **Extended Euclidean Algorithm** is used to efficiently find the multiplicative inverse.
+
+# Extended Euclidean Algorithm
+
+## 1. Purpose
+
+The **Extended Euclidean Algorithm** is used to find the **multiplicative inverse** of a number under a given modulus.
+
+If we want to find the inverse of \(a\) modulo \(m\), we need to find \(x\) such that:
+
+$$
+a \times x \equiv 1 \pmod{m}
+$$
+
+---
+
+## 2. Algorithm
+
+The Extended Euclidean Algorithm is based on the Euclidean Algorithm.
+
+It finds integers \(x\) and \(y\) such that:
+
+$$
+ax + my = \gcd(a,m)
+$$
+
+If:
+
+$$
+\gcd(a,m)=1
+$$
+
+then:
+
+$$
+ax + my = 1
+$$
+
+Taking modulo \(m\):
+
+$$
+ax \equiv 1 \pmod{m}
+$$
+
+Therefore, \(x\) is the **multiplicative inverse of \(a\) modulo \(m\)**.
+
+---
+
+## 3. Steps
+
+1. Apply the **Euclidean Algorithm** to find \(\gcd(a,m)\).
+2. Continue the divisions until the remainder becomes \(1\).
+3. Use **back substitution** to express \(1\) as a combination of \(a\) and \(m\).
+4. The coefficient of \(a\) gives the multiplicative inverse.
+5. If the coefficient is negative, take its positive equivalent using modulo \(m\).
+6. Verify the answer by checking:
+
+$$
+(a \times x)\mod m = 1
+$$
+
+---
+
+## 4. Important Condition
+
+The multiplicative inverse exists only when:
+
+$$
+\boxed{\gcd(a,m)=1}
+$$
+
+If:
+
+$$
+\gcd(a,m)\neq1
+$$
+
+then the multiplicative inverse does not exist.
+
+---
+
+## 5. Verification
+
+After finding the inverse \(x\), verify it using:
+
+$$
+\boxed{(a\times x)\mod m=1}
+$$
+
+If the result is \(1\), the calculated inverse is correct.
