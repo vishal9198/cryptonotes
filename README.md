@@ -1284,33 +1284,33 @@ This video from *Neso Academy* provides a clear, step-by-step tutorial on the **
 
 ### The CRT Statement
 
-The theorem establishes that a system of congruent equations with one variable \(x\) and pairwise relatively prime moduli
+The theorem establishes that a system of congruent equations with one variable $x$ and pairwise relatively prime moduli
 
-\[
+$$
 m_1, m_2, \ldots, m_n
-\]
+$$
 
 has a unique solution.
 
 ### The General Formula
 
-The formula used to find \(x\) is:
+The formula used to find $x$ is:
 
-\[
+$$
 x = \sum_{i=1}^{n} a_i M_i M_i^{-1} \pmod{M}
-\]
+$$
 
 where:
 
-\[
+$$
 M = m_1m_2\cdots m_n
-\]
+$$
 
 and
 
-\[
+$$
 M_i = \frac{M}{m_i}
-\]
+$$
 
 ---
 
@@ -1318,94 +1318,94 @@ M_i = \frac{M}{m_i}
 
 Solve the following system:
 
-\[
+$$
 x \equiv 2 \pmod{3}
-\]
+$$
 
-\[
+$$
 x \equiv 3 \pmod{5}
-\]
+$$
 
-\[
+$$
 x \equiv 2 \pmod{7}
-\]
+$$
 
-## 1. Find Moduli \(M\)
+## 1. Find Moduli ($M$)
 
 Calculate the product:
 
-\[
+$$
 M = 3 \times 5 \times 7
-\]
+$$
 
-\[
+$$
 M = 105
-\]
+$$
 
-## 2. Calculate Partial Products \(M_i\)
+## 2. Calculate Partial Products ($M_i$)
 
-\[
+$$
 M_1 = 35
-\]
+$$
 
-\[
+$$
 M_2 = 21
-\]
+$$
 
-\[
+$$
 M_3 = 15
-\]
+$$
 
 ## 3. Find Multiplicative Inverses
 
 Solve for each inverse such that:
 
-\[
+$$
 M_i \cdot M_i^{-1} \equiv 1 \pmod{m_i}
-\]
+$$
 
 The values are:
 
-\[
+$$
 M_1^{-1} = 2
-\]
+$$
 
-\[
+$$
 M_2^{-1} = 1
-\]
+$$
 
-\[
+$$
 M_3^{-1} = 1
-\]
+$$
 
 ## 4. Final Calculation
 
 Using the formula:
 
-\[
+$$
 x = (a_1M_1M_1^{-1} + a_2M_2M_2^{-1} + a_3M_3M_3^{-1}) \pmod{M}
-\]
+$$
 
 Substitute the values:
 
-\[
+$$
 x = (2 \times 35 \times 2 + 3 \times 21 \times 1 + 2 \times 15 \times 1) \pmod{105}
-\]
+$$
 
-\[
+$$
 x = 233 \pmod{105}
-\]
+$$
 
-\[
+$$
 x = 23
-\]
+$$
 
 Therefore:
 
-\[
+$$
 \boxed{x = 23}
-\]
+$$
 
 ## Verification
 
-Plug \(23\) back into the original equations to confirm that the remainders match the given values.
+Plug $23$ back into the original equations to confirm that the remainders match the given values.
