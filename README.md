@@ -1409,3 +1409,114 @@ $$
 ## Verification
 
 Plug $23$ back into the original equations to confirm that the remainders match the given values.
+# Fermat's Factoring Method
+
+This video explains **Fermat's Factoring Method**, a technique used in network security and cryptography to factor a number $n$ that is the product of two prime numbers, $x$ and $y$.
+
+## Core Principle
+
+Fermat's method works best when the two prime factors, $x$ and $y$, are close to each other.
+
+It relies on the algebraic identity:
+
+$$
+n = x^2 - y^2
+$$
+
+Which can be rewritten to isolate the value of $x$:
+
+$$
+x = \sqrt{n + y^2}
+$$
+
+## Step-by-Step Procedure
+
+1. **Setup:** Take the number $n$ you wish to factor.
+
+2. **Iteration:** Test successive integer values for $y$ (starting from $1, 2, 3, \ldots$).
+
+3. **Identify Integer:** Calculate
+
+   $$
+   \sqrt{n + y^2}
+   $$
+
+   Keep increasing $y$ until the result is a perfect integer.
+
+4. **Solve:** Once you find an integer $x$ for a specific $y$, use the factored form of the difference of squares:
+
+   $$
+   n = (x+y)(x-y)
+   $$
+
+## Example Walkthrough
+
+### Factoring 187
+
+Trial:
+
+$$
+\sqrt{187 + 1^2} = \sqrt{188}
+$$
+
+No.
+
+$$
+\sqrt{187 + 2^2} = \sqrt{191}
+$$
+
+No.
+
+$$
+\sqrt{187 + 3^2} = \sqrt{196} = 14
+$$
+
+Yes.
+
+Calculation:
+
+$$
+(14+3)(14-3)
+$$
+
+$$
+= 17 \times 11
+$$
+
+The prime factors are **17 and 11**.
+
+### Factoring 3233
+
+Through iteration, the algorithm finds:
+
+$$
+x = 57
+$$
+
+and
+
+$$
+y = 4
+$$
+
+Calculation:
+
+$$
+(57+4)(57-4)
+$$
+
+$$
+= 61 \times 53
+$$
+
+The prime factors are **61 and 53**.
+
+## Summary
+
+While Fermat's method is efficient for numbers with close prime factors, its performance decreases significantly as the distance between the factors increases.
+
+The instructor concludes with a homework challenge:
+
+$$
+n = 3009
+$$
